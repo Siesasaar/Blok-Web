@@ -1,15 +1,16 @@
 /**************/
 /* CSS REMEDY */
 /**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
 }
 
-button, summary {
+button,
+summary {
 	cursor: pointer;
 }
-
-
 
 
 
@@ -18,11 +19,9 @@ button, summary {
 /*********************/
 :root {
 	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	--color-text: #111;
+	--color-background: #fff;
 }
-
-
 
 
 
@@ -30,10 +29,427 @@ button, summary {
 /* JOUW STYLING */
 /****************/
 
-/* jouw code */
-
-body {
-  color:var(--color-text);
-  background-color:var(--color-background);
+/********************** ALGEMEEN**********************/
+h1 {
+	font-size: 2.5em;
+	position: absolute;
+	margin-bottom: 1em;
+	margin-top: 1.75em;
+	margin-left: 2em;
 }
 
+@font-face {
+	font-family: lettertype;
+	src: url(../Lettertypes/PPAgrandir-Regular.otf);
+}
+
+body {
+	color: var(--color-text);
+	background-color: var(--color-background);
+	font-family: sans-serif;
+	margin: 0em;
+	font-family: lettertype;
+	position: relative;
+}
+
+/******************************************************HEADER******************************************************/
+/* SECTIONS*/
+header {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	padding: 0.5em 1em;
+	align-items: center;
+}
+
+header:nth-of-type(1) button {
+	grid-column-start: 1;
+	grid-column-end: 1;
+	display: flex;
+	justify-content: left;
+	border: none;
+	width: 3em;
+}
+
+header:nth-of-type(1) a {
+	/* logo*/
+	grid-column-start: 2;
+	grid-column-end: 2;
+	display: flex;
+	justify-content: center;
+}
+
+/******************************************************MAIN******************************************************/
+/* SECTIONS*/
+
+/*<!--Welkomsbeeld-->*/
+main section:nth-of-type(1) p {
+	position: absolute;
+	margin-top: 8em;
+	text-align: center;
+}
+
+main section:nth-of-type(1) img {
+	margin-top: 1em;
+	width: 50em;
+}
+
+main section:nth-of-type(1) button {
+	position: absolute;
+	margin-left: 9em;
+	margin-top: 16em;
+
+	background-color: #278b42;
+	border: none;
+	border-radius: .25em;
+	color: #fff;
+
+	width: 10em;
+	height: 3em;
+}
+
+/*<!--Even een kijkje in de keuken-->*/
+main section:nth-of-type(2) h2 {
+	font-size: 1.5em;
+	text-align: center;
+	margin-top: 1.5em;
+}
+
+main section:nth-of-type(2) p {
+	text-align: center;
+	margin: 0em 1em 5em 1em;
+}
+
+main section:nth-of-type(2) img {
+	margin-left: 2.5em;
+	width: 80%;
+}
+
+main section:nth-of-type(2) h2:nth-of-type(2) {
+	font-size: 1em;
+	text-align: center;
+	margin-top: 1em;
+	margin-bottom: .5em;
+}
+
+main section:nth-of-type(2) p:nth-of-type(2) {
+	font-size: .75em;
+	text-align: center;
+}
+
+main section:nth-of-type(2) img:nth-of-type(2) {
+	margin-left: 9.5em;
+	width: 15%;
+	margin-bottom: 3em;
+}
+
+/* grijze lijn toevoegen*/
+
+/*<!--Zo werkt het-->*/
+main section:nth-of-type(3) h2 {
+	font-size: 1.5em;
+	text-align: center;
+	margin-top: 1.5em;
+}
+
+main section:nth-of-type(3) p {
+	font-size: .85em;
+	text-align: center;
+	margin: 0em 1em 3em 1em;
+}
+
+main section:nth-of-type(3) img {
+	margin: 1em;
+	width: 90%;
+}
+
+main section:nth-of-type(3) h2:nth-of-type(2) {
+	font-size: 1em;
+	text-align: center;
+	margin-top: 1.5em;
+}
+
+main section:nth-of-type(3) h2:nth-of-type(3) {
+	font-size: 1em;
+	text-align: center;
+	margin-top: 1.5em;
+}
+
+main section:nth-of-type(3) h2:nth-of-type(4) {
+	font-size: .9em;
+	text-align: center;
+	margin-top: 1.5em;
+}
+
+main section:nth-of-type(3) h2:nth-of-type(5) {
+	font-size: 1em;
+	text-align: center;
+	margin-top: 1.5em;
+}
+
+main section:nth-of-type(3) p:nth-of-type(5) {
+	margin-bottom: 2em;
+}
+
+main section:nth-of-type(3) button {
+	margin-left: 8em;
+
+	background-color: #ffffff;
+	border-color: #278b42;
+	border-radius: .25em;
+	color: #278b42;
+
+	width: 12em;
+	height: 3em;
+}
+
+main section:nth-of-type(3) p:nth-of-type(6) {
+	margin-top: 2em;
+}
+
+/*<!--Goed voor jou, je portemonée en de planeet-->*/
+main section:nth-of-type(4) h2 {
+	font-size: 1.5em;
+	text-align: left;
+	margin-top: 1.5em;
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+main section:nth-of-type(4) img:nth-of-type(1) {
+	margin: 1em;
+	width: 90%;
+}
+
+main section:nth-of-type(4) img:nth-of-type(2) {
+	position: relative;
+	width: 5%;
+	margin-left: 1.5em;
+}
+
+main section:nth-of-type(4) h2 {
+	font-size: 1.5em;
+	margin: 1em 1em .25em 1em;
+}
+
+main section:nth-of-type(4) h2:nth-of-type(2) {
+	font-size: 1em;
+	margin: .5em 1em .25em 1em;
+}
+
+main section:nth-of-type(4) h2:nth-of-type(3) {
+	font-size: 1em;
+	margin: .5em 1em .25em 1em;
+}
+
+main section:nth-of-type(4) h2:nth-of-type(4) {
+	font-size: 1em;
+	margin: .5em 1em .25em 1em;
+}
+
+main section:nth-of-type(4) p {
+	font-size: .85em;
+	text-align: left;
+	margin-left: 1em;
+}
+
+main section:nth-of-type(4) img:nth-of-type(3) {
+	position: relative;
+	width: 5%;
+	margin-left: 1.5em;
+}
+
+main section:nth-of-type(4) img:nth-of-type(4) {
+	position: relative;
+	width: 5%;
+	margin-left: 1.5em;
+}
+
+main section:nth-of-type(4) button {
+	margin-left: 1em;
+	margin-top: 1.5em;
+
+	background-color: #278b42;
+	border: none;
+	border-radius: .25em;
+	color: #fff;
+
+	width: 10em;
+	height: 3em;
+}
+
+/*<!--Jouw smaak, jouw box-->*/
+/* main section:nth-of-type(5) h2:nth-of-type(1) {
+	font-size: 1.5em;
+	text-align: center;
+	margin-top: 3em;
+}
+
+main section:nth-of-type(5) p {
+	font-size: .85em;
+	text-align: center;
+	margin: 1em;
+}
+
+main section:nth-of-type(5) h2:nth-of-type(2) {
+	font-size: 1.25em;
+	margin-top: 3em;
+	position: absolute;
+	margin-left: 3.75em;
+}
+
+main section:nth-of-type(5) p:nth-of-type(2) {
+	font-size: .85em;
+	margin-top: 7em;
+	position: absolute;
+	margin-left: 3.75em;
+}
+
+main section:nth-of-type(5) img:nth-of-type(1) {
+	position: absolute;
+	margin-left: .5em;
+	margin-top: 12.5em;
+
+	width: 3em;
+}
+
+main section:nth-of-type(5) img:nth-of-type(2) {
+	width: 15em;
+	margin: 1em;
+	margin-left: 4em;
+}
+
+main section:nth-of-type(5) img:nth-of-type(3) {
+	position: absolute;
+	margin-top: 7em;
+	width: 3em;
+}
+
+main section:nth-of-type(5) button {
+	margin-left: 9em;
+
+	background-color: #ffffff;
+	border-color: #278b42;
+	border-radius: .25em;
+	color: #278b42;
+
+	width: 10em;
+	height: 3em;
+} */
+
+/*<!--Reviews-->*/
+main section:nth-of-type(6) h2:nth-of-type(1) {
+	font-size: .9em;
+	text-align: center;
+	margin-top: 3em;
+}
+
+main section:nth-of-type(6) h2:nth-of-type(2) {
+	font-size: .9em;
+	text-align: center;
+}
+
+main section:nth-of-type(6) img:nth-of-type(1) {
+	margin-left: 10.5em;
+}
+
+main section:nth-of-type(6) p:nth-of-type(1) {
+	font-size: .75em;
+	text-align: center;
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+main section:nth-of-type(6) img:nth-of-type(2) {
+	margin-left: 9em;
+}
+
+/* grijze lijn toevoegen*/
+
+/******************************************************FOOTER******************************************************/
+footer {
+	text-align: center;
+}
+
+/*<!--Blijf op de hoogte-->*/
+footer section:nth-of-type(1) h2 {
+	font-size: 1.5em;
+	text-align: center;
+	margin-top: 3em;
+}
+
+footer section:nth-of-type(1) p {
+	font-size: .9em;
+	text-align: left;
+
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+footer section:nth-of-type(1) input {
+	width: 12em;
+	height: 3em;
+}
+
+footer section:nth-of-type(1) button:nth-of-type(1) {
+	background-color: #278b42;
+	border: none;
+	border-radius: .25em;
+	color: #fff;
+
+	width: 8em;
+	height: 3em;
+}
+
+footer section:nth-of-type(1) button:nth-of-type(2) {
+	background-color: #ffffff;
+	border-color: #278b42;
+	border-radius: .25em;
+	color: #278b42;
+
+	width: 24em;
+	height: 3em;
+
+	margin-top: 2em;
+
+	text-decoration: underline;
+}
+
+footer section:nth-of-type(1) h3 {
+	font-size: .8em;
+	text-align: left;
+
+	margin: 2.5em 2em;
+}
+
+footer section:nth-of-type(1) h3:nth-of-type(4) {
+	font-size: .8em;
+	text-align: left;
+
+	margin: 2.5em 2em;
+	margin-bottom: 1em;
+}
+
+footer img {
+	margin-bottom: 2em;
+}
+
+footer h4:nth-of-type(1) {
+	font-size: .65em;
+	text-decoration: underline;
+	position: absolute;
+	margin-left: 6em;
+	margin-top: -2em;
+}
+
+footer h4:nth-of-type(2) {
+	font-size: .65em;
+	text-decoration: underline;
+	position: absolute;
+	margin-left: 19em;
+	margin-top: -2em;
+}
+
+footer h4:nth-of-type(3) {
+	font-size: .65em;
+	text-align: center;
+}
