@@ -12,8 +12,6 @@ summary {
 	cursor: pointer;
 }
 
-
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
@@ -23,19 +21,42 @@ summary {
 	--color-background: #fff;
 }
 
-
-
 /****************/
 /* JOUW STYLING */
 /****************/
 
 /********************** ALGEMEEN**********************/
 h1 {
+	font-size: 0;
+	visibility: hidden;
+}
+
+h2 {
 	font-size: 2.5em;
 	position: absolute;
-	margin-bottom: 1em;
-	margin-top: 1.75em;
-	margin-left: 2em;
+	margin: 3em 0 1em 1.2em;
+}
+
+h2 span::before {
+	content: "tijd";
+	animation: tekst infinite 6s;
+	padding-left: .25em;
+	text-decoration-line: underline;
+	font-style: italic;
+}
+
+@keyframes tekst {
+	0% {
+		content: "tijd";
+	}
+
+	50% {
+		content: "geld";
+	}
+
+	75% {
+		content: "stress";
+	}
 }
 
 @font-face {
@@ -61,7 +82,7 @@ header {
 	align-items: center;
 }
 
-header:nth-of-type(1) button {
+header:nth-of-type(1) a {
 	grid-column-start: 1;
 	grid-column-end: 1;
 	display: flex;
@@ -70,21 +91,26 @@ header:nth-of-type(1) button {
 	width: 3em;
 }
 
-header:nth-of-type(1) a {
+header:nth-of-type(1) a:nth-of-type(2) {
 	/* logo*/
 	grid-column-start: 2;
 	grid-column-end: 2;
 	display: flex;
 	justify-content: center;
+	margin-left: 2em;
 }
 
 /******************************************************MAIN******************************************************/
 /* SECTIONS*/
 
 /*<!--Welkomsbeeld-->*/
+main section:nth-of-type(1) {
+	overflow-x: hidden;
+}
+
 main section:nth-of-type(1) p {
 	position: absolute;
-	margin-top: 8em;
+	margin-top: 11em;
 	text-align: center;
 }
 
@@ -93,22 +119,24 @@ main section:nth-of-type(1) img {
 	width: 50em;
 }
 
-main section:nth-of-type(1) button {
+main section:nth-of-type(1) a {
+	box-sizing: border-box;
 	position: absolute;
-	margin-left: 9em;
+	margin-left: 7em;
 	margin-top: 16em;
-
 	background-color: #278b42;
 	border: none;
 	border-radius: .25em;
 	color: #fff;
-
+	text-decoration: none;
+	text-align: center;
+	padding-top: .75em;
 	width: 10em;
 	height: 3em;
 }
 
 /*<!--Even een kijkje in de keuken-->*/
-main section:nth-of-type(2) h2 {
+main section:nth-of-type(2) h3 {
 	font-size: 1.5em;
 	text-align: center;
 	margin-top: 1.5em;
@@ -124,7 +152,7 @@ main section:nth-of-type(2) img {
 	width: 80%;
 }
 
-main section:nth-of-type(2) h2:nth-of-type(2) {
+main section:nth-of-type(2) h3:nth-of-type(2) {
 	font-size: 1em;
 	text-align: center;
 	margin-top: 1em;
@@ -145,7 +173,7 @@ main section:nth-of-type(2) img:nth-of-type(2) {
 /* grijze lijn toevoegen*/
 
 /*<!--Zo werkt het-->*/
-main section:nth-of-type(3) h2 {
+main section:nth-of-type(3) h3 {
 	font-size: 1.5em;
 	text-align: center;
 	margin-top: 1.5em;
@@ -162,25 +190,34 @@ main section:nth-of-type(3) img {
 	width: 90%;
 }
 
-main section:nth-of-type(3) h2:nth-of-type(2) {
+main section:nth-of-type(3) a {
+	color: #278b42;
+	text-decoration: none;
+	margin-left: 6.5em;
+	padding: .5em 1.5em;
+	border: solid #278b42;
+	border-radius: .25em;
+}
+
+main section:nth-of-type(3) h3:nth-of-type(2) {
 	font-size: 1em;
 	text-align: center;
 	margin-top: 1.5em;
 }
 
-main section:nth-of-type(3) h2:nth-of-type(3) {
+main section:nth-of-type(3) h3:nth-of-type(3) {
 	font-size: 1em;
 	text-align: center;
 	margin-top: 1.5em;
 }
 
-main section:nth-of-type(3) h2:nth-of-type(4) {
+main section:nth-of-type(3) h3:nth-of-type(4) {
 	font-size: .9em;
 	text-align: center;
 	margin-top: 1.5em;
 }
 
-main section:nth-of-type(3) h2:nth-of-type(5) {
+main section:nth-of-type(3) h3:nth-of-type(5) {
 	font-size: 1em;
 	text-align: center;
 	margin-top: 1.5em;
@@ -190,29 +227,13 @@ main section:nth-of-type(3) p:nth-of-type(5) {
 	margin-bottom: 2em;
 }
 
-main section:nth-of-type(3) button {
-	margin-left: 8em;
-
-	background-color: #ffffff;
-	border-color: #278b42;
-	border-radius: .25em;
-	color: #278b42;
-
-	width: 12em;
-	height: 3em;
-}
-
 main section:nth-of-type(3) p:nth-of-type(6) {
 	margin-top: 2em;
 }
 
 /*<!--Goed voor jou, je portemonée en de planeet-->*/
-main section:nth-of-type(4) h2 {
-	font-size: 1.5em;
-	text-align: left;
-	margin-top: 1.5em;
-	margin-left: 1em;
-	margin-right: 1em;
+main section:nth-of-type(4) {
+	background-color: rgb(243, 243, 243);
 }
 
 main section:nth-of-type(4) img:nth-of-type(1) {
@@ -224,32 +245,6 @@ main section:nth-of-type(4) img:nth-of-type(2) {
 	position: relative;
 	width: 5%;
 	margin-left: 1.5em;
-}
-
-main section:nth-of-type(4) h2 {
-	font-size: 1.5em;
-	margin: 1em 1em .25em 1em;
-}
-
-main section:nth-of-type(4) h2:nth-of-type(2) {
-	font-size: 1em;
-	margin: .5em 1em .25em 1em;
-}
-
-main section:nth-of-type(4) h2:nth-of-type(3) {
-	font-size: 1em;
-	margin: .5em 1em .25em 1em;
-}
-
-main section:nth-of-type(4) h2:nth-of-type(4) {
-	font-size: 1em;
-	margin: .5em 1em .25em 1em;
-}
-
-main section:nth-of-type(4) p {
-	font-size: .85em;
-	text-align: left;
-	margin-left: 1em;
 }
 
 main section:nth-of-type(4) img:nth-of-type(3) {
@@ -264,86 +259,146 @@ main section:nth-of-type(4) img:nth-of-type(4) {
 	margin-left: 1.5em;
 }
 
-main section:nth-of-type(4) button {
+main section:nth-of-type(4) h3 {
+	font-size: 1.5em;
+	margin: 1em 1em .25em 1em;
+}
+
+main section:nth-of-type(4) h3:nth-of-type(2) {
+	font-size: 1em;
+	margin: .5em 1em .25em 1em;
+}
+
+main section:nth-of-type(4) h3:nth-of-type(3) {
+	font-size: 1em;
+	margin: .5em 1em .25em 1em;
+}
+
+main section:nth-of-type(4) h3:nth-of-type(4) {
+	font-size: 1em;
+	margin: .5em 1em .25em 1em;
+}
+
+main section:nth-of-type(4) p {
+	font-size: .85em;
+	text-align: left;
 	margin-left: 1em;
-	margin-top: 1.5em;
+	margin-bottom: 3em;
+}
 
-	background-color: #278b42;
-	border: none;
-	border-radius: .25em;
+main section:nth-of-type(4) a {
 	color: #fff;
-
-	width: 10em;
-	height: 3em;
+	background-color: #278b42;
+	text-decoration: none;
+	margin-left: 1em;
+	padding: .8em 1.5em;
+	border: solid #fff;
+	border-radius: .25em;
 }
 
 /*<!--Jouw smaak, jouw box-->*/
-/* main section:nth-of-type(5) h2:nth-of-type(1) {
-	font-size: 1.5em;
+main section:nth-of-type(5) h3 {
 	text-align: center;
 	margin-top: 3em;
 }
 
 main section:nth-of-type(5) p {
-	font-size: .85em;
 	text-align: center;
-	margin: 1em;
+	font-size: .8em;
+	margin: 1.5em;
 }
 
-main section:nth-of-type(5) h2:nth-of-type(2) {
-	font-size: 1.25em;
-	margin-top: 3em;
+.container {
+	width: 85vmin;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	overflow: hidden;
+	border: 10px solid rgb(236, 236, 236);
+	border-radius: 8px;
+	box-shadow: 10px 25px 30px rgba(0.0.0, 0, 3);
+	margin-top: 8em;
+	margin-left: 11.5em;
+}
+
+.slider {
+	width: 100%;
+	display: flex;
+	animation: slide 16s infinite;
+}
+
+@keyframes slide {
+	0% {
+		transform: translateX(0);
+	}
+
+	25% {
+		transform: translateX(0);
+	}
+
+	30% {
+		transform: translateX(-100%);
+	}
+
+	50% {
+		transform: translateX(-200%);
+	}
+
+	55% {
+		transform: translateX(-200%);
+	}
+
+	75% {
+		transform: translateX(-200%);
+	}
+
+	80% {
+		transform: translateX(-300%);
+	}
+
+	100% {
+		transform: translateX(-300%);
+	}
+}
+
+main section:nth-of-type(5) img {
+	width: 100%;
+	opacity: 0.5;
+}
+
+main section:nth-of-type(5) a {
+	color: #278b42;
+	text-decoration: none;
+	margin-left: 6.5em;
+	padding: .5em 1.5em;
+	border: solid #278b42;
+	border-radius: .25em;
+	margin-top: 1em;
+}
+
+main section:nth-of-type(5) h3:nth-of-type(2) {
 	position: absolute;
-	margin-left: 3.75em;
+	z-index: 2;
+	margin-left: 3em;
+	margin-top: 2em;
 }
 
 main section:nth-of-type(5) p:nth-of-type(2) {
-	font-size: .85em;
-	margin-top: 7em;
 	position: absolute;
-	margin-left: 3.75em;
+	font-size: .8em;
+	z-index: 2;
+	margin-left: 4.5em;
+	margin-top: 5em;
 }
-
-main section:nth-of-type(5) img:nth-of-type(1) {
-	position: absolute;
-	margin-left: .5em;
-	margin-top: 12.5em;
-
-	width: 3em;
-}
-
-main section:nth-of-type(5) img:nth-of-type(2) {
-	width: 15em;
-	margin: 1em;
-	margin-left: 4em;
-}
-
-main section:nth-of-type(5) img:nth-of-type(3) {
-	position: absolute;
-	margin-top: 7em;
-	width: 3em;
-}
-
-main section:nth-of-type(5) button {
-	margin-left: 9em;
-
-	background-color: #ffffff;
-	border-color: #278b42;
-	border-radius: .25em;
-	color: #278b42;
-
-	width: 10em;
-	height: 3em;
-} */
 
 /*<!--Reviews-->*/
-main section:nth-of-type(6) h2:nth-of-type(1) {
+main section:nth-of-type(6) h3:nth-of-type(1) {
 	font-size: .9em;
 	text-align: center;
 	margin-top: 3em;
 }
 
-main section:nth-of-type(6) h2:nth-of-type(2) {
+main section:nth-of-type(6) h3:nth-of-type(2) {
 	font-size: .9em;
 	text-align: center;
 }
@@ -370,17 +425,31 @@ footer {
 	text-align: center;
 }
 
+footer label {
+	visibility: hidden;
+	position: absolute;
+}
+
+footer button :nth-of-type(1) {
+	margin-right: 8em;
+	position: relative;
+}
+
 /*<!--Blijf op de hoogte-->*/
-footer section:nth-of-type(1) h2 {
+footer section:nth-of-type(1) {
+	background-color: rgb(243, 243, 243);
+}
+
+footer section:nth-of-type(1) h3 {
 	font-size: 1.5em;
 	text-align: center;
 	margin-top: 3em;
+	padding-top: 1em;
 }
 
 footer section:nth-of-type(1) p {
 	font-size: .9em;
 	text-align: left;
-
 	margin-left: 1em;
 	margin-right: 1em;
 }
@@ -395,36 +464,35 @@ footer section:nth-of-type(1) button:nth-of-type(1) {
 	border: none;
 	border-radius: .25em;
 	color: #fff;
-
 	width: 8em;
 	height: 3em;
+	margin-bottom: 2em;
 }
 
-footer section:nth-of-type(1) button:nth-of-type(2) {
-	background-color: #ffffff;
-	border-color: #278b42;
-	border-radius: .25em;
+/********* SECTION 2 *********/
+footer section:nth-of-type(2) a {
 	color: #278b42;
-
-	width: 24em;
-	height: 3em;
-
-	margin-top: 2em;
-
+	text-decoration: none;
+	margin-left: 3.5em;
+	padding: .5em 1.5em;
+	border: solid #278b42;
+	border-radius: .25em;
 	text-decoration: underline;
+	display: flex;
+	justify-content: center;
+	margin-top: 2em;
+	width: 16em;
 }
 
-footer section:nth-of-type(1) h3 {
+footer section:nth-of-type(2) h4 {
 	font-size: .8em;
 	text-align: left;
-
 	margin: 2.5em 2em;
 }
 
-footer section:nth-of-type(1) h3:nth-of-type(4) {
+footer section:nth-of-type(2) h4:nth-of-type(4) {
 	font-size: .8em;
 	text-align: left;
-
 	margin: 2.5em 2em;
 	margin-bottom: 1em;
 }
@@ -433,7 +501,7 @@ footer img {
 	margin-bottom: 2em;
 }
 
-footer h4:nth-of-type(1) {
+footer h5:nth-of-type(1) {
 	font-size: .65em;
 	text-decoration: underline;
 	position: absolute;
@@ -441,7 +509,7 @@ footer h4:nth-of-type(1) {
 	margin-top: -2em;
 }
 
-footer h4:nth-of-type(2) {
+footer h5:nth-of-type(2) {
 	font-size: .65em;
 	text-decoration: underline;
 	position: absolute;
@@ -449,7 +517,24 @@ footer h4:nth-of-type(2) {
 	margin-top: -2em;
 }
 
-footer h4:nth-of-type(3) {
+footer h5:nth-of-type(3) {
 	font-size: .65em;
 	text-align: center;
+}
+
+.footermenu {
+	text-align: left;
+	margin: 2em;
+	font-size: 0.8em;
+}
+
+footer details ul {
+	margin: 1em;
+}
+
+footer details ul li {
+	margin: 1em;
+	color: #278b42;
+	text-decoration: underline;
+	list-style: none;
 }
