@@ -23,7 +23,7 @@
 		<!--Welkomsbeeld-->
 		<h1>Hello Fresh</h1>
 		<section>
-			<a href="/zowerkthet.html">Bestel jouw box</a>
+			<a href="./zowerkthet.html">Bestel jouw box</a>
 			<h2>Bespaar <span></span></h2>
 			<p>Kies elke week uit meer dan 30 recepten vanaf slechts € 3,56 per persoon</p>
 			<img src="./images/homepagefoto.jpg" alt="Homepage banner">
@@ -65,7 +65,7 @@
 			<h3>Kook met de beste ingrediënten</h3>
 			<p>Bereid in 4 tot 6 eenvoudige stappen een verse maaltijd.</p>
 
-			<a href="../Blok-Web/bestellen.html">Bestel jouw box</a>
+			<a href="./zowerkthet.html">Bestel jouw box</a>
 			<p>Je kunt de box elke week aanpassen, pauzeren of opzeggen.</p>
 		</section>
 
@@ -90,7 +90,7 @@
 			<p>Altijd verse ingrediënten in precies de juiste hoeveelheden in huis - zo kook je supervers en verspil je
 				niks.</p>
 
-			<a href="/zowerkthet.html">Aan de slag</a>
+			<a href="./zowerkthet.html">Aan de slag</a>
 		</section>
 
 
@@ -103,16 +103,16 @@
 			<p>snelle recepten in 20 minuten klaar</p>
 
 			<div class="container">
-			<div class="slider">
-				<img src="./images/gerecht1.jpg" alt="Pasta">
-				<img src="./images/gerecht2.jpg" alt="Salade">
-				<img src="./images/gerecht3.jpg" alt="Shakshouka">
-				<img src="./images/gerecht2.jpg" alt="Salade">
-				<img src="./images/gerecht1.jpg" alt="Pasta">
+				<div class="slider">
+					<img src="./images/gerecht1.jpg" alt="Pasta">
+					<img src="./images/gerecht2.jpg" alt="Salade">
+					<img src="./images/gerecht3.jpg" alt="Shakshouka">
+					<img src="./images/gerecht2.jpg" alt="Salade">
+					<img src="./images/gerecht1.jpg" alt="Pasta">
+				</div>
 			</div>
-		</div>
 
-			<a href="/zowerkthet.html">Bekijk het menu</a>
+			<a href="./zowerkthet.html">Bekijk het menu</a>
 		</section>
 
 
@@ -134,7 +134,7 @@
 			<h3>Blijf op de hoogte</h3>
 			<p>Schrijf je nu in voor onze wekelijkse nieuwsbrief en ontvang inspirerende recepten!</p>
 			<label for="emailadres">Email</label>
-			<input type="email" name="" id="emailadres" placeholder="Vul je emailadres in">
+			<input type="email" name="" id="emailadres" placeholder="Vul je emailadres in" aria-invalid="false">
 			<button>Schrijf je in</button>
 		</section>
 
@@ -145,43 +145,70 @@
 			<div class="footermenu">
 				<details>
 					<summary>HelloFresh</summary>
-						<ul>
-							<li>Cadeaubon</li>
-							<li>Unidays</li>
-							<li>Student Beans</li>
-							<li>Blog</li>
-							<li>Recepten</li>
-							<li>Cookievoorkeuren</li>
-						</ul>
+					<ul>
+						<li>Cadeaubon</li>
+						<li>Unidays</li>
+						<li>Student Beans</li>
+						<li>Blog</li>
+						<li>Recepten</li>
+						<li>Cookievoorkeuren</li>
+					</ul>
 				</details>
 
 				<details>
 					<summary>Ons bedrijf</summary>
-						<ul>
-							<li>HelloFresh Group</li>
-							<li>Jobs</li>
-							<li>Pers</li>
-						</ul>
+					<ul>
+						<li>HelloFresh Group</li>
+						<li>Jobs</li>
+						<li>Pers</li>
+					</ul>
 				</details>
 
 				<details>
 					<summary>Samenwerken?</summary>
-						<ul>
-							<li>Partnerprogramma/Affiliaties</li>
-							<li>Influencerws</li>
-							<li>Marketingsamenwerking</li>
-							<li>Voor bedrijven</li>
-						</ul>
+					<ul>
+						<li>Partnerprogramma/Affiliaties</li>
+						<li>Influencerws</li>
+						<li>Marketingsamenwerking</li>
+						<li>Voor bedrijven</li>
+					</ul>
 				</details>
-				
+
 				<details>
 					<summary>Hulp nodig?</summary>
-						<ul>
-							<li>Contact</li>
-							<li>Helpcenter</li>
-							<li>Tevredenheid</li>
-							<li>Voor bedrijven</li>
-						</ul>
+					<ul>
+						<li>Contact</li>
+						<form method="post" action="">
+							<div>
+								<label for="voornaam">Voornaam:</label>
+								<input id="voornaam" name="voornaam" /><br />
+
+								<label for="achternaam">Achternaam:</label>
+								<input id="achternaam" name="achternaam" /><br />
+
+								<label for="email">Email:</label>
+								<input id="email" name="email" /><br />
+
+								<label for="onderwerp">Onderwerp:</label>
+								<input id="onderwerp" name="onderwerp" /><br />
+								<label>Land:</label>
+								<select>
+									<option>Nederland (NL)</option>
+									<option>België (BE)</option>
+								</select>
+						
+								<label for="bericht">Bericht:</label>
+								<textarea id="bericht" name="bericht" cols="30" rows="4"></textarea>
+						
+								<label>&nbsp;</label>
+								<input type="button" value="Versuur" />&nbsp;<input type="reset" value="Reset" />
+							</div>
+						</form>
+
+						<li>Helpcenter</li>
+						<li>Tevredenheid</li>
+						<li>Voor bedrijven</li>
+					</ul>
 				</details>
 			</div>
 

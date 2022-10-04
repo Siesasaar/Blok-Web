@@ -19,6 +19,7 @@ summary {
 	/* startje */
 	--color-text: #111;
 	--color-background: #fff;
+	--basis-kleur: #278b42;
 }
 
 /****************/
@@ -73,6 +74,16 @@ body {
 	position: relative;
 }
 
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: #424141;
+	}
+}
+
+input:invalid {
+	border-color: red;
+}
+
 /******************************************************HEADER******************************************************/
 /* SECTIONS*/
 header {
@@ -124,7 +135,7 @@ main section:nth-of-type(1) a {
 	position: absolute;
 	margin-left: 7em;
 	margin-top: 16em;
-	background-color: #278b42;
+	background-color: var(--basis-kleur);
 	border: none;
 	border-radius: .25em;
 	color: #fff;
@@ -195,7 +206,7 @@ main section:nth-of-type(3) a {
 	text-decoration: none;
 	margin-left: 6.5em;
 	padding: .5em 1.5em;
-	border: solid #278b42;
+	border: solid var(--basis-kleur);
 	border-radius: .25em;
 }
 
@@ -288,7 +299,7 @@ main section:nth-of-type(4) p {
 
 main section:nth-of-type(4) a {
 	color: #fff;
-	background-color: #278b42;
+	background-color: var(--basis-kleur);
 	text-decoration: none;
 	margin-left: 1em;
 	padding: .8em 1.5em;
@@ -367,11 +378,11 @@ main section:nth-of-type(5) img {
 }
 
 main section:nth-of-type(5) a {
-	color: #278b42;
+	color: var(--basis-kleur);
 	text-decoration: none;
 	margin-left: 6.5em;
 	padding: .5em 1.5em;
-	border: solid #278b42;
+	border: solid var(--basis-kleur);
 	border-radius: .25em;
 	margin-top: 1em;
 }
@@ -460,7 +471,7 @@ footer section:nth-of-type(1) input {
 }
 
 footer section:nth-of-type(1) button:nth-of-type(1) {
-	background-color: #278b42;
+	background-color: var(--basis-kleur);
 	border: none;
 	border-radius: .25em;
 	color: #fff;
@@ -471,11 +482,11 @@ footer section:nth-of-type(1) button:nth-of-type(1) {
 
 /********* SECTION 2 *********/
 footer section:nth-of-type(2) a {
-	color: #278b42;
+	color: var(--basis-kleur);
 	text-decoration: none;
 	margin-left: 3.5em;
 	padding: .5em 1.5em;
-	border: solid #278b42;
+	border: solid var(--basis-kleur);
 	border-radius: .25em;
 	text-decoration: underline;
 	display: flex;
@@ -534,7 +545,65 @@ footer details ul {
 
 footer details ul li {
 	margin: 1em;
-	color: #278b42;
+	color: var(--basis-kleur);
 	text-decoration: underline;
 	list-style: none;
+}
+
+/* form */
+footer form {
+	padding: 15px;
+	width: 250x;
+	color: var(--color-text);
+}
+
+footer label:nth-of-type(2) {
+	float: left;
+	width: 50px;
+	text-align: right;
+	color: var(--color-text);
+
+	margin-right: 15px;
+}
+
+footer input:nth-of-type(2) {
+	background-color: #f5f5f5;
+
+	font-size: x-small;
+	color: var(--color-text);
+
+
+	border-width: 1px;
+	border-style: solid;
+	border-color: #cccccc;
+
+	margin-bottom: 10px;
+}
+
+footer select {
+	width: 100px;
+	font-size: x-small;
+	color: var(--color-text);
+
+	background-color: #f5f5f5;
+
+	border-color: #cccccc;
+	border-style: solid;
+	border-width: 1px;
+
+	margin-bottom: 10px;
+}
+
+footer textarea {
+	width: 100%;
+	height: 20px;
+	background-color: #f5f5f5;
+	color: var(--color-text);
+
+
+	border-width: 1px;
+	border-style: solid;
+	border-color: var(--basis-kleur);
+
+	margin-bottom: 10px;
 }
