@@ -182,7 +182,7 @@ main section:nth-of-type(5) p {
 footer section a {
 	color: var(--basis-kleur);
 	text-decoration: none;
-	margin-left: 4em;
+	margin-left: 6em;
 	padding: .5em 1.5em;
 	border: solid var(--basis-kleur);
 	border-radius: .25em;
