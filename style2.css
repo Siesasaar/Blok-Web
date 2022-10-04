@@ -9,19 +9,15 @@ body {
 	color: var(--color-text);
 	background-color: var(--color-background);
 	font-family: sans-serif;
-    font-family: lettertype;
+	font-family: lettertype;
 
 	margin: 0em;
-    margin-left: 1em;
+	margin-left: 1em;
 }
 
 h1 {
 	font-size: 0;
 	visibility: hidden;
-}
-
-h2 {
-    text-align: center;
 }
 
 /******************************************************HEADER******************************************************/
@@ -34,23 +30,11 @@ header {
 }
 
 header:nth-of-type(1) a {
-	grid-column-start: 1;
-	grid-column-end: 1;
-	display: flex;
-	justify-content: left;
-	border: none;
-	width: 3em;
-}
-
-header:nth-of-type(1) a {
 	/* logo*/
 	grid-column-start: 2;
 	grid-column-end: 2;
 	display: flex;
-	justify-content: center;
+	margin-top: .5em;
 }
-/* *****************************************************MAIN*****************************************************
 
-
-
-/******************************************************FOOTER******************************************************/
+/* *****************************************************MAIN*****************************************************/
