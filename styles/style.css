@@ -77,6 +77,15 @@ body {
 @media (prefers-color-scheme: dark) {
 	body {
 		background-color: #424141;
+		color: #fff;
+	}
+
+	h2 {
+		color: #111;
+	}
+
+	main section:nth-of-type(1) p {
+		color: #111;
 	}
 }
 
@@ -91,15 +100,6 @@ header {
 	grid-template-columns: repeat(3, 1fr);
 	padding: 0.5em 1em;
 	align-items: center;
-}
-
-header:nth-of-type(1) a {
-	grid-column-start: 1;
-	grid-column-end: 1;
-	display: flex;
-	justify-content: left;
-	border: none;
-	width: 3em;
 }
 
 header:nth-of-type(1) a:nth-of-type(2) {
@@ -243,10 +243,6 @@ main section:nth-of-type(3) p:nth-of-type(6) {
 }
 
 /*<!--Goed voor jou, je portemonée en de planeet-->*/
-main section:nth-of-type(4) {
-	background-color: rgb(243, 243, 243);
-}
-
 main section:nth-of-type(4) img:nth-of-type(1) {
 	margin: 1em;
 	width: 90%;
@@ -303,7 +299,6 @@ main section:nth-of-type(4) a {
 	text-decoration: none;
 	margin-left: 1em;
 	padding: .8em 1.5em;
-	border: solid #fff;
 	border-radius: .25em;
 }
 
@@ -447,10 +442,6 @@ footer button :nth-of-type(1) {
 }
 
 /*<!--Blijf op de hoogte-->*/
-footer section:nth-of-type(1) {
-	background-color: rgb(243, 243, 243);
-}
-
 footer section:nth-of-type(1) h3 {
 	font-size: 1.5em;
 	text-align: center;
@@ -606,4 +597,26 @@ footer textarea {
 	border-color: var(--basis-kleur);
 
 	margin-bottom: 10px;
+}
+
+/* hamburgermenu  */
+
+/* 
+header:nth-of-type(1) a {
+	grid-column-start: 1;
+	grid-column-end: 1;
+	display: flex;
+	justify-content: left;
+	border: none;
+	width: 3em;
+} */
+
+
+/* hover  */
+section:nth-of-type(1) a:hover {
+	scale: 1.5;
+}
+
+button:hover {
+	scale: 1.5;
 }
