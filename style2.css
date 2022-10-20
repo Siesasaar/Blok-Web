@@ -43,13 +43,6 @@ body {
 	margin-left: 1em;
 }
 
-@media (prefers-color-scheme: dark) {
-	body {
-		background-color: #424141;
-		color: #fff;
-	}
-}
-
 h1 {
 	font-size: 0;
 	visibility: hidden;
@@ -239,4 +232,14 @@ footer details ul li {
 	list-style: none;
 }
 
-/* *****************************************************MAIN*****************************************************/
+/* *****************************************************DARKMODE*****************************************************/
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: #424141;
+		color: #fff;
+	}
+	footer section a {
+		border: solid #fff;
+}
+}
