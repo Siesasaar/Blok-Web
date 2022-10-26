@@ -237,9 +237,10 @@ footer details ul li {
 @media (prefers-color-scheme: dark) {
 	body {
 		background-color: #424141;
-		color: #fff;
-	}
-	footer section a {
-		border: solid #fff;
+		color: #fff;}
 }
+
+/* *****************************************************FOCUS*****************************************************/
+:focus {
+	border: blue 0.5em solid;
 }
