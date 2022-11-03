@@ -77,19 +77,23 @@ body {
 /******************************************************HEADER******************************************************/
 /* SECTIONS*/
 header {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	/* display: grid;
+	grid-template-columns: repeat(3, 1fr); */
+	display: flex;
 	padding: 0.5em 1em;
 	align-items: center;
 }
 
 header:nth-of-type(1) a:nth-of-type(2) {
 	/* logo*/
-	grid-column-start: 2;
-	grid-column-end: 2;
-	display: flex;
+	/* grid-column-start: 2;
+	grid-column-end: 2; */
 	justify-content: center;
 	margin-left: 2em;
+}
+
+header ul {
+	list-style-type: none;
 }
 
 /******************************************************MAIN******************************************************/
@@ -625,6 +629,7 @@ input:invalid {
 
 /* *****************************************************HOVER*****************************************************/
 :hover {
+display: inline-block;
 }
 
 /* *****************************************************FOCUS*****************************************************/
