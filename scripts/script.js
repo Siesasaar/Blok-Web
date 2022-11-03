@@ -1,11 +1,15 @@
 // JavaScript Document
 console.log("hi");
 
-var eersteImagesButton =
-document.querySelector("section.images li:nth-of-type(1 button");
+var openButton =
+document.querySelector("header > button");
 
-eersteImagesButton.addEventListener("click", eersteImagesButtonKlik);
+openButton.addEventListener("click", openMenu);
 
-function eersteImagesButtonKlik() {
-    eersteImagesButton.classList.toggle("menuOpen");
+function openMenu() {
+
+var deNav =
+document.querySelector("nav");
+
+deNav.classList.add("toonMenu")
 }
