@@ -32,6 +32,10 @@ summary {
 	font-family: lettertype;
 	src: url(./Lettertypes/PPAgrandir-Regular.otf);
 }
+@font-face {
+	font-family: lettertype-bold;
+	src: url(../Lettertypes/PP_Agrandir/PPAgrandirText-Bold.otf);
+}
 
 body {
 	color: var(--color-text);
@@ -40,7 +44,6 @@ body {
 	font-family: lettertype;
 
 	margin: 0em;
-	margin-left: 1em;
 }
 
 h1 {
@@ -60,23 +63,108 @@ h3 {
 p {
 	font-size: .75em;
 	text-align: center;
-	margin-bottom: 4em;
-	margin-left: 1em;
-	margin-right: 1em;
+}
+
+a {
+	font-size: 0.8em;
+}
+
+/******************************************************HEADER******************************************************/
+header {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	padding: 0.5em 1em;
+}
+
+/* HelloFresh Logo */
+header > a {
+	margin: auto;
+}
+
+header button {
+	background-color: var(--basis-kleur);
+	border: none;
+	border-radius: .25em;
+	width: 4em;
+	height: 3em;
+}
+
+header ul {
+	list-style: none;
+}
+
+/* HAMBURGER MENU */
+nav {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top:0;
+	bottom: 0;
+
+	padding: 1em;
+	z-index: 100;
+
+	background-color: var(--color-background);
+
+	transform: translate(-100%);
+	transition: transform .3s;
+}
+nav ul {
+	padding: 0;
+	list-style: none;
+}
+nav li {
+	margin-bottom: .4em;
+}
+nav li:first-of-type(2) a {
+	font-family: lettertype-bold;
+}
+nav a{
+	display: flex;
+	text-decoration: none;
+	color: var(--color-text);
+	font-size: 1em;
+}
+
+/* MENU OPEN*/
+nav.openMenu {
+	transform: translateX(0);
+}
+
+/***************************************MAIN***************************************/
+main {
+	width: 100vw;
+}
+
+main section,
+main section img {
+	width: 100%;
+}
+
+main section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 0 1em;
 }
 
 main section a {
 	color: #fff;
 	background-color: var(--basis-kleur);
 	text-decoration: none;
-	margin-left: 8em;
 	padding: .8em 1.5em;
-	border: solid #fff;
 	border-radius: .45em;
 }
 
-a {
-	font-size: 0.8em;
+main section a:hover,
+main section a:focus {
+	color: var(--basis-kleur);
+	background-color: #fff;
+	transition: .3s;
+}
+
+main section a:focus {
+	outline: 2px auto hotpink;
 }
 
 main img {
@@ -85,34 +173,6 @@ main img {
 
 main section:nth-of-type(1) img {
 	margin-top: .8em;
-}
-
-/******************************************************HEADER******************************************************/
-header {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	padding: 0.5em 1em;
-	align-items: center;
-}
-
-header:nth-of-type(1) a {
-	grid-column-start: 1;
-	grid-column-end: 1;
-	display: flex;
-	justify-content: left;
-	border: none;
-	width: 3em;
-	margin-top: .5em;
-}
-
-header:nth-of-type(1) a:nth-of-type(2) {
-	/* logo*/
-	grid-column-start: 2;
-	grid-column-end: 2;
-	display: flex;
-	justify-content: center;
-	margin-left: 2em;
-	margin-top: .5em;
 }
 
 /* SECTION 4 */
@@ -144,9 +204,20 @@ main section:nth-of-type(4) a {
 	text-decoration: none;
 	margin-left: 1em;
 	padding: .8em 8em;
-	border: solid #fff;
 	border-radius: .45em;
 }
+
+main section:nth-of-type(4) a:hover,
+main section:nth-of-type(4) a:focus {
+	color: var(--basis-kleur);
+	background-color: #fff;
+	transition: .3s;
+}
+
+main section:nth-of-type(4) a:focus {
+	outline: 2px auto hotpink;
+}
+
 
 /* SECTION 5 */
 main section:nth-of-type(5) h2 {
@@ -165,6 +236,7 @@ main section:nth-of-type(5) h3 {
 main section:nth-of-type(5) h4 {
 	text-align: left;
 	font-size: .75em;
+	margin-bottom: 0;
 }
 
 main section:nth-of-type(5) p {
@@ -173,11 +245,11 @@ main section:nth-of-type(5) p {
 	margin-right: 1em;
 }
 
-/* SECTION 6 */
+/*************************************FOOTER***************************************/
 footer section a {
 	color: var(--basis-kleur);
 	text-decoration: none;
-	margin-left: 6em;
+	margin-left: 6.5em;
 	padding: .5em 1.5em;
 	border: solid var(--basis-kleur);
 	border-radius: .25em;
@@ -186,6 +258,17 @@ footer section a {
 	justify-content: center;
 	margin-top: 3em;
 	width: 16em;
+}
+
+footer section a:hover,
+footer section a:focus {
+	color: var(--basis-kleur);
+	background-color: #fff;
+	transition: .3s;
+}
+
+footer section a:focus {
+	outline: 2px auto hotpink;
 }
 
 footer img {
@@ -241,6 +324,4 @@ footer details ul li {
 }
 
 /* *****************************************************FOCUS*****************************************************/
-:focus {
-	border: blue 0.5em solid;
-}
+
