@@ -550,6 +550,10 @@ footer section:nth-of-type(2) a:focus {
 	transition: .3s;
 }
 
+footer section:nth-of-type(2) a:focus {
+	outline: 2px auto hotpink;
+}
+
 footer section:nth-of-type(2) h4 {
 	font-size: .8em;
 	text-align: left;
